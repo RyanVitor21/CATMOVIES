@@ -1,27 +1,54 @@
-#container {
-  text-align: center;
+// Escarlate
+$scarlet: #ff2400;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.toolbar-custom {
+  --background: #1e1e1e;
 }
 
-#container strong {
+.logo {
+  color: $scarlet;
+  font-weight: bold;
   font-size: 20px;
-  line-height: 26px;
+  padding-left: 10px;
+  text-transform: uppercase;
 }
 
-#container p {
+.menu-icon {
+  color: $scarlet;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.custom-content {
+  --background: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-content {
+  text-align: center;
+  width: 100%;
+}
+
+.cat-img {
+  width: 150px;
+  margin: 40px auto 20px;
+  display: block;
+}
+
+.welcome-text {
+  color: #c7a6a6;
   font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+  margin: 20px;
 }
 
-#container a {
-  text-decoration: none;
+.start-button {
+  --background: #e74c3c;
+  --border-radius: 30px;
+  --color: white;
+  font-weight: bold;
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
 }
