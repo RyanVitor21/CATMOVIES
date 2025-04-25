@@ -1,0 +1,54 @@
+// Escarlate
+$scarlet: #ff2400;
+
+.toolbar-custom {
+  --background: #1e1e1e;
+}
+
+.logo {
+  color: $scarlet;
+  font-weight: bold;
+  font-size: 20px;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+
+.menu-icon {
+  color: $scarlet;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.custom-content {
+  --background: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-content {
+  text-align: center;
+  width: 100%;
+}
+
+.cat-img {
+  width: 150px;
+  margin: 40px auto 20px;
+  display: block;
+}
+
+.welcome-text {
+  color: #c7a6a6;
+  font-size: 16px;
+  margin: 20px;
+}
+
+.start-button {
+  --background: #e74c3c;
+  --border-radius: 30px;
+  --color: white;
+  font-weight: bold;
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
