@@ -1,4 +1,5 @@
-# 🚀 CATMOVIE App Mobile com Ionic 5
+# 😺 CATMOVIE App Mobile com Ionic 5 
+
 
 Um aplicativo mobile usando **Ionic 5 + Angular**.
 
