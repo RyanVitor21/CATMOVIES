@@ -1,0 +1,7 @@
+{
+  "name": "CATMOVIES",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

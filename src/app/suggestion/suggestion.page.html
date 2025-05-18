@@ -1,0 +1,49 @@
+<ion-header class="ion-no-border header-bg">
+  <ion-toolbar>
+    <ion-title
+      class="primary-color-04 font-koulen"
+      (click)="goToHome()"
+      style="cursor: pointer"
+    >
+      CATMOVIES
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="main-content">
+  <div id="container" class="center-flex">
+    <!-- Capa -->
+    <ion-img class="cartaz" [src]="filme.capa" alt="Capa do Filme"></ion-img>
+
+    <span class="container-data">
+      <!-- Título -->
+      <h1 class="movie-title border">{{ filme.titulo }}</h1>
+
+      <span class="data-movie border">
+        <span class="gender">{{filme.genero}}</span>
+        <span class="duration"> {{filme.duracao}}</span>
+      </span>
+
+      <!-- Sinopse + IMDb + Streaming -->
+      <p class="synopsis border">{{ filme.sinopse }}</p>
+
+      <span class="imdb-rate font-lexend border">
+        IMDb: <span class="rate">{{ filme.nota }}</span>
+        <img
+          class="icon"
+          src="../../assets/images/Star Filled.png"
+          alt="yellow-star"
+        />
+      </span>
+
+      <span class="streaming-available">
+        <h2 class="font-lexend">Disponível em:</h2>
+        <span class="streaming-list"> {{filme.streaming_disponivel}} </span>
+      </span>
+    </span>
+    <!-- Botão de voltar -->
+    <ion-button class="font-lexend button" (click)="carregarFilmeAleatorio()">
+      escolher novamente, meow
+    </ion-button>
+  </div>
+</ion-content>

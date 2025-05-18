@@ -1,0 +1,822 @@
+[
+  {
+    "titulo": "Mad Max: Estrada da Fúria",
+    "genero": "Ação",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "120 min",
+    "sinopse": "Em um deserto pós-apocalíptico, Max une forças com Imperator Furiosa para escapar do tirano Immortan Joe.",
+    "nota": 8.1,
+    "capa": "assets/banners/mad-max-estrada-da-furia.jpg"
+  },
+  {
+    "titulo": "John Wick: De Volta ao Jogo",
+    "genero": "Ação",
+    "classificacao_indicativa": "18 anos",
+    "streaming_disponivel": ["Starzplay"],
+    "duracao": "101 min",
+    "sinopse": "Um assassino aposentado retorna ao mundo do crime após o roubo de seu carro e a morte de seu cachorro.",
+    "nota": 7.4,
+    "capa": "assets/banners/john-wick-de-volta-ao-jogo.jpg"
+  },
+  {
+    "titulo": "O Cavaleiro das Trevas",
+    "genero": "Ação",
+    "classificacao_indicativa": "14 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "152 min",
+    "sinopse": "Batman enfrenta o Coringa, um criminoso psicótico que quer mergulhar Gotham City no caos.",
+    "nota": 9.0,
+    "capa": "assets/banners/Batman-o-cavaleiro-das-trevas-ressurge.jpg"
+  },
+  {
+    "titulo": "Vingadores: Ultimato",
+    "genero": "Ação",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["Disney+"],
+    "duracao": "181 min",
+    "sinopse": "Os heróis da Marvel unem forças para derrotar Thanos após o estalo do infinito.",
+    "nota": 8.4,
+    "capa": "assets/banners/Vingadores-utimato.jpg"
+  },
+  {
+    "titulo": "Duro de Matar",
+    "genero": "Ação",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "132 min",
+    "sinopse": "Um policial de Nova York enfrenta um grupo de terroristas em um arranha-céu durante uma festa de Natal.",
+    "nota": 8.2,
+    "capa": "assets/banners/duro-de-matar.jpg"
+  },
+  {
+    "titulo": "Missão Impossível: Efeito Fallout",
+    "genero": "Ação",
+    "classificacao_indicativa": "14 anos",
+    "streaming_disponivel": ["Paramount+"],
+    "duracao": "147 min",
+    "sinopse": "Ethan Hunt e sua equipe enfrentam uma nova ameaça global enquanto tentam impedir um ataque nuclear.",
+    "nota": 7.7,
+    "capa": "assets/banners/Missao-Impossivel-Efeito Fallout.jpg"
+  },
+  {
+    "titulo": "Gladiador",
+    "genero": "Ação",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "155 min",
+    "sinopse": "Um general romano traído busca vingança e restauração de sua honra nos coliseus de Roma.",
+    "nota": 8.5,
+    "capa": "assets/banners/Gladiador.jpg"
+  },
+  {
+    "titulo": "Matrix",
+    "genero": "Ação",
+    "classificacao_indicativa": "14 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "136 min",
+    "sinopse": "Um hacker descobre que o mundo em que vive é uma simulação criada por máquinas inteligentes.",
+    "nota": 8.7,
+    "capa": "assets/banners/Matrix.jpg"
+  },
+  {
+    "titulo": "Kill Bill: Volume 1",
+    "genero": "Ação",
+    "classificacao_indicativa": "18 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "111 min",
+    "sinopse": "Uma noiva desperta de um coma e busca vingança contra seus antigos colegas de gangue.",
+    "nota": 8.1,
+    "capa": "assets/banners/Kill-Bill-Volume-1.jpg"
+  },
+  {
+    "titulo": "A Origem",
+    "genero": "Ação",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["Netflix", "Amazon Prime"],
+    "duracao": "148 min",
+    "sinopse": "Um ladrão especializado em roubo de segredos corporativos é contratado para implantar uma ideia na mente de um CEO.",
+    "nota": 8.8,
+    "capa": "assets/banners/A-Origem.jpg"
+  },
+  {
+    "titulo": "Superbad: É Hoje",
+    "genero": "Comédia",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "113 min",
+    "sinopse": "Dois amigos nerds embarcam em uma aventura para comprar álcool para uma festa antes de se formarem no ensino médio.",
+    "nota": 7.6,
+    "capa": "assets/banners/Superbad.jpg"
+  },
+  {
+    "titulo": "O Grande Hotel Budapeste",
+    "genero": "Comédia",
+    "classificacao_indicativa": "14 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "99 min",
+    "sinopse": "As aventuras de Gustave H., um concierge em um famoso hotel europeu, e Zero Moustafa, o lobby boy que se torna seu amigo confiável.",
+    "nota": 8.1,
+    "capa": "assets/banners/O-Grande-Hotel-Budapeste.jpg"
+  },
+  {
+    "titulo": "O Âncora: A Lenda de Ron Burgundy",
+    "genero": "Comédia",
+    "classificacao_indicativa": "14 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "94 min",
+    "sinopse": "Um apresentador de notícias dos anos 70 enfrenta mudanças em sua vida profissional e pessoal.",
+    "nota": 7.2,
+    "capa": "assets/banners/O-ancora-A-Lenda-de-Ron-Burgundy.jpg"
+  },
+  {
+    "titulo": "Casamento Grego",
+    "genero": "Comédia",
+    "classificacao_indicativa": "14 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "125 min",
+    "sinopse": "Uma mulher solteira luta para lidar com os preparativos do casamento de sua melhor amiga.",
+    "nota": 6.8,
+    "capa": "assets/banners/Casamento-Grego.jpg"
+  },
+  {
+    "titulo": "Feitiço do Tempo",
+    "genero": "Comédia",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "101 min",
+    "sinopse": "Um repórter do tempo fica preso em um loop temporal, repetindo o mesmo dia várias vezes.",
+    "nota": 8.0,
+    "capa": "assets/banners/Feitico-do-Tempo.jpg"
+  },
+  {
+    "titulo": "Monty Python e o Cálice Sagrado",
+    "genero": "Comédia",
+    "classificacao_indicativa": "14 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "91 min",
+    "sinopse": "Rei Arthur e seus cavaleiros partem em busca do cálice sagrado em um mundo absurdo e cheio de humor.",
+    "nota": 8.2,
+    "capa": "assets/banners/Monty-Python -e-o-calice-sagrado.jpg"
+  },
+  {
+    "titulo": "A Noite do Jogo",
+    "genero": "Comédia",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "100 min",
+    "sinopse": "Durante uma reunião familiar, um jogo inofensivo se transforma em uma competição mortal.",
+    "nota": 6.3,
+    "capa": "assets/banners/A-Noite-do-Jogo.jpg "
+  },
+  {
+    "titulo": "Escola de Rock",
+    "genero": "Comédia",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "108 min",
+    "sinopse": "Um músico fracassado finge ser professor substituto e forma uma banda com seus alunos.",
+    "nota": 7.1,
+    "capa": "assets/banners/Escola-de-Rock.jpg"
+  },
+  {
+    "titulo": "Todo Mundo em Pânico",
+    "genero": "Comédia",
+    "classificacao_indicativa": "14 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "88 min",
+    "sinopse": "Uma paródia hilária de filmes de terror como 'Pânico' e 'O Sexto Sentido'.",
+    "nota": 5.5,
+    "capa": "assets/banners/Todo-Mundo-em-Panico.jpg"
+  },
+  {
+    "titulo": "As Branquelas",
+    "genero": "Comédia",
+    "classificacao_indicativa": "14 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "109 min",
+    "sinopse": "Dois agentes do FBI se disfarçam de irmãs ricas para proteger uma família de criminosos.",
+    "nota": 5.6,
+    "capa": "assets/banners/As-Branquelas.jpg "
+  },
+  {
+    "titulo": "Clube da Luta",
+    "genero": "Drama",
+    "classificacao_indicativa": "18 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "139 min",
+    "sinopse": "Um inspetor de seguros insatisfeito encontra um novo propósito ao conhecer Tyler Durden, um vendedor de sabonetes.",
+    "nota": 8.8,
+    "capa": "assets/banners/Clube-da-Luta.jpg"
+  },
+  {
+    "titulo": "O Pianista",
+    "genero": "Drama",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "150 min",
+    "sinopse": "A história real de Władysław Szpilman, um pianista judeu que sobrevive ao Holocausto.",
+    "nota": 8.5,
+    "capa": "assets/banners/O-Pianista.jpg"
+  },
+  {
+    "titulo": "Parasita",
+    "genero": "Drama",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Hulu", "Amazon Prime"],
+    "duracao": "132 min",
+    "sinopse": "Uma família pobre começa a trabalhar para uma família rica, mas as coisas tomam um rumo sombrio.",
+    "nota": 8.5,
+    "capa": "assets/banners/Parasita.jpg"
+  },
+  {
+    "titulo": "Forrest Gump: O Contador de Histórias",
+    "genero": "Drama",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Telecine Play"],
+    "duracao": "142 min",
+    "sinopse": "A vida extraordinária de Forrest Gump, um homem com QI baixo que acaba participando de grandes eventos históricos.",
+    "nota": 8.8,
+    "capa": "assets/banners/Forrest-Gump.jpg"
+  },
+  {
+    "titulo": "Whiplash: Em Busca da Perfeição",
+    "genero": "Drama",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "106 min",
+    "sinopse": "Um jovem baterista enfrenta um professor exigente em sua busca para se tornar um grande músico.",
+    "nota": 8.5,
+    "capa": "assets/banners/Whiplash-Em-Busca-da-Perfeicao.jpg"
+  },
+  {
+    "titulo": "Manchester à Beira-Mar",
+    "genero": "Drama",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "137 min",
+    "sinopse": "Um homem retorna à sua cidade natal após a morte de seu irmão e precisa cuidar de seu sobrinho.",
+    "nota": 7.8,
+    "capa": "assets/banners/Manchester-a-Beira-Mar.jpg"
+  },
+  {
+    "titulo": "Cidade de Deus",
+    "genero": "Drama",
+    "classificacao_indicativa": "18 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "130 min",
+    "sinopse": "A história de dois jovens que crescem nas perigosas favelas do Rio de Janeiro.",
+    "nota": 8.6,
+    "capa": "assets/banners/Cidade-de-Deus.jpg"
+  },
+  {
+    "titulo": "Três Anúncios Para Um Crime",
+    "genero": "Drama",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "115 min",
+    "sinopse": "Uma mãe frustrada aluga três outdoors para pressionar a polícia local a resolver o caso de assassinato de sua filha.",
+    "nota": 8.1,
+    "capa": "assets/banners/Tres-Anuncios-Para-Um-Crime.jpg"
+  },
+  {
+    "titulo": "A Lista de Schindler",
+    "genero": "Drama",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "195 min",
+    "sinopse": "Um empresário alemão salva mais de mil judeus durante o Holocausto.",
+    "nota": 8.9,
+    "capa": "assets/banners/A-Lista-de-Schindler.jpg "
+  },
+  {
+    "titulo": "O Silêncio dos Inocentes",
+    "genero": "Drama",
+    "classificacao_indicativa": "18 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "118 min",
+    "sinopse": "Uma agente do FBI busca a ajuda de um assassino em série para capturar outro serial killer.",
+    "nota": 8.6,
+    "capa": "assets/banners/O-Silencio-dos-Inocentes.jpg"
+  },
+  {
+    "titulo": "Blade Runner: O Caçador de Androides",
+    "genero": "Ficção Científica",
+    "classificacao_indicativa": "14 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "117 min",
+    "sinopse": "Um caçador de replicantes enfrenta questões sobre humanidade e identidade em um futuro distópico.",
+    "nota": 8.1,
+    "capa": "assets/banners/Blade-Runner.jpg"
+  },
+  {
+    "titulo": "O Exterminador do Futuro",
+    "genero": "Ficção Científica",
+    "classificacao_indicativa": "14 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "107 min",
+    "sinopse": "Um androide viaja no tempo para matar a mãe de um líder rebelde antes de seu nascimento.",
+    "nota": 8.0,
+    "capa": "assets/banners/O-Exterminador-do-Futuro.jpg"
+  },
+  {
+    "titulo": "Interstellar",
+    "genero": "Ficção Científica",
+    "classificacao_indicativa": "10 anos",
+    "streaming_disponivel": ["Paramount+", "Google Play Movies"],
+    "duracao": "169 min",
+    "sinopse": "Um grupo de exploradores viaja por um buraco de minhoca em busca de um novo lar para a humanidade.",
+    "nota": 8.6,
+    "capa": "assets/banners/Interstellar.jpg"
+  },
+  {
+    "titulo": "O Quinto Elemento",
+    "genero": "Ficção Científica",
+    "classificacao_indicativa": "14 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "126 min",
+    "sinopse": "No século 23, uma mulher misteriosa é a chave para salvar a Terra de uma força do mal.",
+    "nota": 7.7,
+    "capa": "assets/banners/O-Quinto-Elemento.jpg"
+  },
+  {
+    "titulo": "De Volta Para o Futuro",
+    "genero": "Ficção Científica",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "116 min",
+    "sinopse": "Um adolescente viaja ao passado em uma máquina do tempo construída por um cientista excêntrico.",
+    "nota": 8.5,
+    "capa": "assets/banners/De-Volta-Para-o-Futuro.jpg"
+  },
+  {
+    "titulo": "Gattaca: A Experiência Genética",
+    "genero": "Ficção Científica",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "106 min",
+    "sinopse": "Um homem geneticamente inferior assume a identidade de outra pessoa para realizar seu sonho de viajar pelo espaço.",
+    "nota": 7.8,
+    "capa": "assets/banners/Gattaca-A-Experiencia-Genetica.jpg"
+  },
+  {
+    "titulo": "Perdido em Marte",
+    "genero": "Ficção Científica",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["Disney+"],
+    "duracao": "144 min",
+    "sinopse": "Um astronauta preso em Marte usa sua engenhosidade para sobreviver até ser resgatado.",
+    "nota": 8.0,
+    "capa": "assets/banners/Perdido-em-Marte.jpg"
+  },
+  {
+    "titulo": "Arrival: A Chegada",
+    "genero": "Ficção Científica",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "116 min",
+    "sinopse": "Uma linguista é recrutada para se comunicar com alienígenas que chegaram à Terra.",
+    "nota": 7.9,
+    "capa": "assets/banners/Arrival-A-Chegada.jpg "
+  },
+  {
+    "titulo": "Interestelar",
+    "genero": "Ficção Científica",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "169 min",
+    "sinopse": "Um grupo de exploradores viaja por um buraco de minhoca em busca de um novo lar para a humanidade.",
+    "nota": 8.6,
+    "capa": "assets/banners/interestelar.jpg"
+  },
+  {
+    "titulo": "Invocação do Mal",
+    "genero": "Terror",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "112 min",
+    "sinopse": "Investigadores paranormais ajudam uma família assombrada por forças malignas.",
+    "nota": 7.5,
+    "capa": "assets/banners/invocacao.jpg"
+  },
+  {
+    "titulo": "O Iluminado",
+    "genero": "Terror",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "146 min",
+    "sinopse": "Um escritor e sua família enfrentam eventos sobrenaturais enquanto passam o inverno em um hotel isolado.",
+    "nota": 8.4,
+    "capa": "assets/banners/O-Iluminado.jpg"
+  },
+  {
+    "titulo": "Hereditário",
+    "genero": "Terror",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "127 min",
+    "sinopse": "Uma família enfrenta eventos assustadores após a morte de sua avó.",
+    "nota": 7.3,
+    "capa": "assets/banners/Hereditário.jpg"
+  },
+  {
+    "titulo": "It: A Coisa",
+    "genero": "Terror",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "135 min",
+    "sinopse": "Sete adolescentes enfrentam um palhaço demoníaco que aterroriza sua cidade.",
+    "nota": 7.3,
+    "capa": "assets/banners/It-a-coisa.jpg"
+  },
+  {
+    "titulo": "O Exorcista",
+    "genero": "Terror",
+    "classificacao_indicativa": "18 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "122 min",
+    "sinopse": "Dois padres tentam exorcizar um demônio de uma garota possuída.",
+    "nota": 8.1,
+    "capa": "assets/banners/O-Exorcista.jpg"
+  },
+  {
+    "titulo": "Corrente do Mal",
+    "genero": "Terror",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "102 min",
+    "sinopse": "Um adolescente recebe uma misteriosa caixa que traz consequências terríveis.",
+    "nota": 6.8,
+    "capa": "assets/banners/Corrente-do-Mal.jpg"
+  },
+  {
+    "titulo": "A Bruxa",
+    "genero": "Terror",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "92 min",
+    "sinopse": "Uma família puritana enfrenta forças sobrenaturais em uma floresta isolada.",
+    "nota": 6.8,
+    "capa": "assets/banners/A-bruxa.jpg "
+  },
+  {
+    "titulo": "Insidious",
+    "genero": "Terror",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "103 min",
+    "sinopse": "Um casal tenta salvar seu filho de um estado vegetativo causado por forças sobrenaturais.",
+    "nota": 6.8,
+    "capa": "assets/banners/Insidious.jpg"
+  },
+  {
+    "titulo": "O Chamado",
+    "genero": "Terror",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "115 min",
+    "sinopse": "Um jornalista investiga uma fita de vídeo que supostamente mata quem a assiste.",
+    "nota": 7.1,
+    "capa": "assets/banners/O-Chamado.jpg"
+  },
+  {
+    "titulo": "Annabelle",
+    "genero": "Terror",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "99 min",
+    "sinopse": "Uma boneca assombrada causa terror em uma casa.",
+    "nota": 5.4,
+    "capa": "assets/banners/Annabelle.jpg "
+  },
+  {
+    "titulo": "Toy Story",
+    "genero": "Animação",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Disney+"],
+    "duracao": "81 min",
+    "sinopse": "Brinquedos ganham vida quando seus donos não estão por perto.",
+    "nota": 8.3,
+    "capa": "assets/banners/Toy-Story.jpg"
+  },
+  {
+    "titulo": "Procurando Nemo",
+    "genero": "Animação",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Disney+"],
+    "duracao": "100 min",
+    "sinopse": "Um peixe-palhaço sai em busca de seu filho perdido.",
+    "nota": 8.2,
+    "capa": "assets/banners/Procurando-Nemo.jpg"
+  },
+  {
+    "titulo": "Shrek",
+    "genero": "Animação",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "90 min",
+    "sinopse": "Um ogro tenta recuperar seu pântano invadido por personagens de contos de fadas.",
+    "nota": 7.9,
+    "capa": "assets/banners/Shrek.jpg"
+  },
+  {
+    "titulo": "Frozen: Uma Aventura Congelante",
+    "genero": "Animação",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Disney+"],
+    "duracao": "102 min",
+    "sinopse": "Duas irmãs enfrentam desafios para salvar seu reino de um inverno eterno.",
+    "nota": 7.4,
+    "capa": "assets/banners/Frozen.jpg"
+  },
+  {
+    "titulo": "Monstros S.A.",
+    "genero": "Animação",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Disney+"],
+    "duracao": "92 min",
+    "sinopse": "Monstros de uma fábrica de sustos precisam lidar com uma criança humana que invade seu mundo.",
+    "nota": 8.1,
+    "capa": "assets/banners/Monstros-S.A.jpg"
+  },
+  {
+    "titulo": "Homem-Aranha no Aranhaverso",
+    "genero": "Animação",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "117 min",
+    "sinopse": "Um adolescente ganha poderes de aranha e deve aprender a ser um herói em um universo multicolorido.",
+    "nota": 8.4,
+    "capa": "assets/banners/Homem-Aranha-no-Aranhaverso.jpg"
+  },
+  {
+    "titulo": "Divertida Mente",
+    "genero": "Animação",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Disney+"],
+    "duracao": "95 min",
+    "sinopse": "Dentro da mente de uma garotinha, suas emoções tentam ajudá-la a lidar com as mudanças em sua vida.",
+    "nota": 8.1,
+    "capa": "assets/banners/Divertida-Mente.jpg"
+  },
+  {
+    "titulo": "O Rei Leão",
+    "genero": "Animação",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Disney+"],
+    "duracao": "88 min",
+    "sinopse": "Um leãozinho deve enfrentar seu passado para assumir seu lugar como rei da selva.",
+    "nota": 8.5,
+    "capa": "assets/banners/O-Rei-Leao.jpg"
+  },
+  {
+    "titulo": "Wall-E",
+    "genero": "Animação",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Disney+"],
+    "duracao": "98 min",
+    "sinopse": "Um robô solitário encontra um novo propósito ao conhecer uma robô exploradora chamada Eva.",
+    "nota": 8.4,
+    "capa": "assets/banners/Wall-E.jpg"
+  },
+  {
+    "titulo": "Viva: A Vida é uma Festa",
+    "genero": "Animação",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Disney+"],
+    "duracao": "105 min",
+    "sinopse": "Um menino sonha em ser músico, mas sua família guarda um segredo relacionado à música.",
+    "nota": 8.4,
+    "capa": "assets/banners/Viva-A-Vida-e-uma-Festa.jpg"
+  },
+  {
+    "titulo": "Meu Malvado Favorito",
+    "genero": "Animação",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "95 min",
+    "sinopse": "Um supervilão adota três órfãs para realizar um grande roubo, mas acaba criando laços com elas.",
+    "nota": 7.6,
+    "capa": "assets/banners/Meu-Malvado-Favorito.jpg"
+  },
+  {
+    "titulo": "Corra!",
+    "genero": "Suspense/Thriller",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "104 min",
+    "sinopse": "Um jovem negro visita a família de sua namorada branca e descobre um terrível segredo.",
+    "nota": 7.7,
+    "capa": "assets/banners/Corra.png"
+  },
+  {
+    "titulo": "Garota Exemplar",
+    "genero": "Suspense/Thriller",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "149 min",
+    "sinopse": "Um homem se torna o principal suspeito do desaparecimento de sua esposa.",
+    "nota": 8.1,
+    "capa": "assets/banners/Garota-Exemplar.jpg"
+  },
+  {
+    "titulo": "A Garota no Trem",
+    "genero": "Suspense/Thriller",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "112 min",
+    "sinopse": "Uma mulher alcoólatra se envolve em um mistério ao testemunhar algo estranho durante seu trajeto de trem.",
+    "nota": 6.5,
+    "capa": "assets/banners/A-Garota-no-Trem.jpg "
+  },
+  {
+    "titulo": "Clube da Luta",
+    "genero": "Suspense/Thriller",
+    "classificacao_indicativa": "18 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "139 min",
+    "sinopse": "Um inspetor de seguros insatisfeito encontra um novo propósito ao conhecer Tyler Durden, um vendedor de sabonetes.",
+    "nota": 8.8,
+    "capa": "assets/banners/Clube-da-Luta.jpg"
+  },
+  {
+    "titulo": "Trama Fantasma",
+    "genero": "Suspense/Thriller",
+    "classificacao_indicativa": "16 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "130 min",
+    "sinopse": "Um alfaiate obsessivo se envolve em um romance misterioso nos anos 1950.",
+    "nota": 7.6,
+    "capa": "assets/banners/Trama-Fantasma.jpg"
+  },
+  {
+    "titulo": "Sicário: Terra de Ninguém",
+    "genero": "Suspense/Thriller",
+    "classificacao_indicativa": "18 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "121 min",
+    "sinopse": "Uma agente do FBI é recrutada para uma missão secreta contra cartéis de drogas na fronteira dos EUA com o México.",
+    "nota": 7.6,
+    "capa": "assets/banners/Sicario-Terra-de-Ninguem.jpg"
+  },
+  {
+    "titulo": "Jogos Mortais",
+    "genero": "Suspense/Thriller",
+    "classificacao_indicativa": "18 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "103 min",
+    "sinopse": "Duas pessoas acordam presas em um banheiro sujo e devem participar de jogos mortais para sobreviver.",
+    "nota": 7.6,
+    "capa": "assets/banners/Jogos-Mortais.jpg"
+  },
+  {
+    "titulo": "Ilha do Medo",
+    "genero": "Suspense/Thriller",
+    "classificacao_indicativa": "18 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "138 min",
+    "sinopse": "Dois detetives investigam o desaparecimento de uma prisioneira em uma ilha para criminosos insanos.",
+    "nota": 8.2,
+    "capa": "assets/banners/Ilha-do-Medo.jpg"
+  },
+  {
+    "titulo": "Perdido em Marte",
+    "genero": "Aventura",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["Disney+"],
+    "duracao": "144 min",
+    "sinopse": "Um astronauta preso em Marte usa sua engenhosidade para sobreviver até ser resgatado.",
+    "nota": 8.0,
+    "capa": "assets/banners/Perdido-em-Marte.jpg"
+  },
+  {
+    "titulo": "Jurassic Park: O Parque dos Dinossauros",
+    "genero": "Aventura",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "127 min",
+    "sinopse": "Um bilionário cria um parque temático com dinossauros vivos, mas as coisas saem do controle.",
+    "nota": 8.1,
+    "capa": "assets/banners/Jurassic-Park-O-Parque-dos-Dinossauros.jpg"
+  },
+  {
+    "titulo": "Indiana Jones e Os Caçadores da Arca Perdida",
+    "genero": "Aventura",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "115 min",
+    "sinopse": "Um arqueólogo aventureiro busca a lendária Arca da Aliança antes que caia nas mãos dos nazistas.",
+    "nota": 8.4,
+    "capa": "assets/banners/Indiana-Jones-e-Os-Cacadores-da-Arca-Perdida.jpg"
+  },
+  {
+    "titulo": "Piratas do Caribe: A Maldição do Pérola Negra",
+    "genero": "Aventura",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["Disney+"],
+    "duracao": "143 min",
+    "sinopse": "Um ferreiro e um pirata excêntrico procuram salvar a filha de um governador das mãos de piratas amaldiçoados.",
+    "nota": 8.0,
+    "capa": "assets/banners/Piratas-do-Caribe-A-Maldicao-do-Perola-Negra.jpg "
+  },
+  {
+    "titulo": "O Senhor dos Anéis: A Sociedade do Anel",
+    "genero": "Aventura",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "178 min",
+    "sinopse": "Um hobbit e seus amigos embarcam em uma jornada para destruir um anel poderoso.",
+    "nota": 8.8,
+    "capa": "assets/banners/O-Senhor-dos-Aneis- A Sociedade-do-Anel.jpg"
+  },
+  {
+    "titulo": "Titanic",
+    "genero": "Romance",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["Paramount+"],
+    "duracao": "194 min",
+    "sinopse": "Um artista pobre e uma jovem aristocrata se apaixonam durante a viagem fatídica do Titanic.",
+    "nota": 7.8,
+    "capa": "assets/banners/Titanic.jpg"
+  },
+  {
+    "titulo": "O Diário de Uma Paixão",
+    "genero": "Romance",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["Netflix"],
+    "duracao": "123 min",
+    "sinopse": "Um casal supera barreiras sociais para viver um amor inesquecível.",
+    "nota": 7.8,
+    "capa": "assets/banners/O-Diario-de-Uma-Paixao.jpg"
+  },
+  {
+    "titulo": "De Repente 30",
+    "genero": "Romance",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "98 min",
+    "sinopse": "Uma garota de 13 anos deseja ter 30 anos e acorda no corpo de uma mulher adulta.",
+    "nota": 6.1,
+    "capa": "assets/banners/De-Repente-30.jpg"
+  },
+  {
+    "titulo": "Como Eu Era Antes de Você",
+    "genero": "Romance",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "110 min",
+    "sinopse": "Uma cuidadora transforma a vida de um homem tetraplégico com seu otimismo.",
+    "nota": 7.4,
+    "capa": "assets/banners/Como-Eu-Era-Antes-de-Voce.jpg"
+  },
+  {
+    "titulo": "Orgulho e Preconceito",
+    "genero": "Romance",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "129 min",
+    "sinopse": "A história de Elizabeth Bennet e Mr. Darcy em meio a preconceitos e romances na Inglaterra do século 19.",
+    "nota": 7.8,
+    "capa": "assets/banners/Orgulho-e-Preconceito.jpg"
+  },
+  {
+    "titulo": "Harry Potter e a Pedra Filosofal",
+    "genero": "Fantasia",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["HBO Max"],
+    "duracao": "152 min",
+    "sinopse": "Um jovem órfão descobre ser um bruxo e vai estudar em uma escola de magia.",
+    "nota": 7.6,
+    "capa": "assets/banners/Harry-Potter-e-a-Pedra-Filosofal.jpg"
+  },
+  {
+    "titulo": "O Senhor dos Anéis: O Retorno do Rei",
+    "genero": "Fantasia",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["Amazon Prime"],
+    "duracao": "201 min",
+    "sinopse": "A batalha final contra Sauron decide o destino da Terra Média.",
+    "nota": 8.9,
+    "capa": "assets/banners/O-Senhor-dos-Aneis-O-Retorno-do-Rei.jpg"
+  },
+  {
+    "titulo": "As Crônicas de Nárnia: O Leão, a Feiticeira e o Guarda-Roupa",
+    "genero": "Fantasia",
+    "classificacao_indicativa": "Livre",
+    "streaming_disponivel": ["Disney+"],
+    "duracao": "143 min",
+    "sinopse": "Quatro irmãos descobrem um mundo mágico dentro de um guarda-roupa.",
+    "nota": 6.9,
+    "capa": "assets/banners/As-Cronicas-de-Narnia-O-Leao-a-Feiticeira-e-o-Guarda-Roupa.jpg "
+  },
+  {
+    "titulo": "Pantera Negra",
+    "genero": "Fantasia",
+    "classificacao_indicativa": "12 anos",
+    "streaming_disponivel": ["Disney+"],
+    "duracao": "134 min",
+    "sinopse": "T'Challa retorna ao reino de Wakanda para assumir o trono e proteger seu povo.",
+    "nota": 7.3,
+    "capa": "assets/banners/Pantera-Negra.jpg"
+  }
+]
