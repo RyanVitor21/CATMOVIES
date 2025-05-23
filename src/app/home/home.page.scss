@@ -1,3 +1,11 @@
+ion-toolbar {
+  /* Flexbox para garantir alinhamento central do conteúdo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container centralizado vertical e horizontal */
 #container {
   text-align: center;
   position: absolute;
@@ -15,12 +23,14 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
 #container a {
   text-decoration: none;
+}
+
+.custom-title-padding {
+  padding-top: 10px;
 }

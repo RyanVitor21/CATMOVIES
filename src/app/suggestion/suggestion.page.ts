@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import {
   IonHeader,
   IonToolbar,
@@ -14,6 +17,8 @@ import {
   IonButtons,
   IonIcon,
 } from '@ionic/angular/standalone';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-suggestion',
@@ -21,6 +26,8 @@ import {
   styleUrls: ['./suggestion.page.scss'],
   standalone: true,
   imports: [
+    CommonModule,
+    FormsModule,
     IonHeader,
     IonToolbar,
     IonTitle,
@@ -34,9 +41,9 @@ import {
   ],
 })
 export class SuggestionPage implements OnInit {
-  filme: any = {}; // Inicializa como um objeto vazio para evitar "undefined"
+  @ViewChild('containerRef', { static: false }) containerRef!: ElementRef;
 
-  // Caminho do JSON
+  filme: any = {}; // Inicializa como objeto vazio para evitar "undefined"
   private readonly FILMES_JSON = '../../assets/dataset/filmes.json';
 
   constructor(private navCtrl: NavController) {}
@@ -46,34 +53,48 @@ export class SuggestionPage implements OnInit {
   }
 
   carregarFilme() {
-    // Tenta recuperar o filme do localStorage
     const filmeSalvo = localStorage.getItem('filmeEscolhido');
     if (filmeSalvo) {
-      this.filme = JSON.parse(filmeSalvo); // Usa o filme salvo
+      this.filme = JSON.parse(filmeSalvo);
     } else {
-      // Se não houver filme no localStorage, carrega um novo aleatório
       this.carregarFilmeAleatorio();
     }
   }
 
   async carregarFilmeAleatorio() {
-    try {
-      const response = await fetch(this.FILMES_JSON);
-      const filmes = await response.json();
+    const container = this.containerRef.nativeElement;
 
-      // Escolhe um filme aleatório
-      const index = Math.floor(Math.random() * filmes.length);
-      this.filme = filmes[index];
+    // animação de saída
+    container.classList.add('fade-out');
 
-      // Atualiza localStorage (opcional)
-      localStorage.setItem('filmeEscolhido', JSON.stringify(this.filme));
-    } catch (error) {
-      console.error('Erro ao carregar o dataset:', error);
-      this.filme = {}; // Garante que o objeto seja redefinido em caso de erro
-    }
+    // espera 1.5 s antes de trocar o filme
+    setTimeout(async () => {
+      try {
+        const response = await fetch(this.FILMES_JSON);
+        const filmes = await response.json();
+
+        const index = Math.floor(Math.random() * filmes.length);
+        this.filme = filmes[index];
+
+        localStorage.setItem('filmeEscolhido', JSON.stringify(this.filme));
+      } catch (error) {
+        console.error('Erro ao carregar o dataset:', error);
+        this.filme = {};
+      }
+
+      // animação de entrada
+      container.classList.remove('fade-out');
+      container.classList.add('fade-in');
+
+      // remove 'fade-in' depois que terminar (0.5 s)
+      setTimeout(() => container.classList.remove('fade-in'), 500);
+    }, 1500); // 1.5 s
   }
 
-  goToHome() {
-    this.navCtrl.navigateBack('/home');
-  }
+ goToHome() {
+  this.navCtrl.navigateBack('/home', {
+    animated: true,
+    animationDirection: 'back',
+  });
+ }
 }

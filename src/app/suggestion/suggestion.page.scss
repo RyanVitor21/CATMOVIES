@@ -102,3 +102,23 @@ ion-button {
   padding-left: 2.2rem;
   padding-right: 2.2rem;
 }
+
+.animate {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.title-center {
+  text-align: center;
+  width: 100%;
+}
+

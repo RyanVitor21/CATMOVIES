@@ -1,9 +1,9 @@
 <ion-header class="ion-no-border header-bg">
   <ion-toolbar>
     <ion-title
-      class="primary-color-04 font-koulen"
+      class="primary-color-04 font-koulen title-center" 
       (click)="goToHome()"
-      style="cursor: pointer"
+      style="cursor: pointer; padding-top: 35px"
     >
       CATMOVIES
     </ion-title>
@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content id="main-content">
-  <div id="container" class="center-flex">
+  <div #containerRef id="container" class="center-flex animate">
     <!-- Capa -->
     <ion-img class="cartaz" [src]="filme.capa" alt="Capa do Filme"></ion-img>
 
