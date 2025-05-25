@@ -1,53 +1,71 @@
 {
-  "hash": "2b855585",
-  "configHash": "8288c1de",
-  "lockfileHash": "5ea809ac",
-  "browserHash": "62881704",
+  "hash": "0eb7d94b",
+  "configHash": "f7d3fc9e",
+  "lockfileHash": "aaf9d500",
+  "browserHash": "8d62c57e",
   "optimized": {
-    "@angular/core": {
-      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
-      "file": "@angular_core.js",
-      "fileHash": "94b1ddb6",
-      "needsInterop": false
-    },
-    "@angular/platform-browser": {
-      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
-      "file": "@angular_platform-browser.js",
-      "fileHash": "1564615b",
-      "needsInterop": false
-    },
-    "@angular/router": {
-      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
-      "file": "@angular_router.js",
-      "fileHash": "115eb6f7",
-      "needsInterop": false
-    },
-    "@ionic/angular": {
-      "src": "../../../../../../node_modules/@ionic/angular/fesm2022/ionic-angular.mjs",
-      "file": "@ionic_angular.js",
-      "fileHash": "66fc54a1",
-      "needsInterop": false
-    },
-    "@ionic/angular/standalone": {
-      "src": "../../../../../../node_modules/@ionic/angular/fesm2022/ionic-angular-standalone.mjs",
-      "file": "@ionic_angular_standalone.js",
-      "fileHash": "dc317773",
-      "needsInterop": false
-    },
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "e54a362c",
+      "fileHash": "9dd60c15",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "57c267f2",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "6c0bb24d",
+      "fileHash": "6a817a54",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "8b12042f",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "eac64dca",
+      "needsInterop": false
+    },
+    "@awesome-cordova-plugins/sqlite-porter/ngx": {
+      "src": "../../../../../../node_modules/@awesome-cordova-plugins/sqlite-porter/ngx/index.js",
+      "file": "@awesome-cordova-plugins_sqlite-porter_ngx.js",
+      "fileHash": "b6576630",
+      "needsInterop": false
+    },
+    "@awesome-cordova-plugins/sqlite/ngx": {
+      "src": "../../../../../../node_modules/@awesome-cordova-plugins/sqlite/ngx/index.js",
+      "file": "@awesome-cordova-plugins_sqlite_ngx.js",
+      "fileHash": "f7bae09e",
+      "needsInterop": false
+    },
+    "@ionic/angular": {
+      "src": "../../../../../../node_modules/@ionic/angular/fesm2022/ionic-angular.mjs",
+      "file": "@ionic_angular.js",
+      "fileHash": "98879e57",
+      "needsInterop": false
+    },
+    "@ionic/angular/standalone": {
+      "src": "../../../../../../node_modules/@ionic/angular/fesm2022/ionic-angular-standalone.mjs",
+      "file": "@ionic_angular_standalone.js",
+      "fileHash": "d5ffd0b5",
       "needsInterop": false
     }
   },
   "chunks": {
+    "dom-3FHNNQ6P": {
+      "file": "dom-3FHNNQ6P.js"
+    },
+    "core-js-UR6QH4NU": {
+      "file": "core-js-UR6QH4NU.js"
+    },
     "swipe-back-S4RSTOIW": {
       "file": "swipe-back-S4RSTOIW.js"
     },
@@ -65,6 +83,9 @@
     },
     "focus-visible-RAFDA6YZ": {
       "file": "focus-visible-RAFDA6YZ.js"
+    },
+    "shadow-css-KQBFNRGS": {
+      "file": "shadow-css-KQBFNRGS.js"
     },
     "ios.transition-JHXM2QRI": {
       "file": "ios__transition-JHXM2QRI.js"
@@ -84,11 +105,8 @@
     "md.transition-30ce8d1b-JEGYBGVU": {
       "file": "md__transition-30ce8d1b-JEGYBGVU.js"
     },
-    "dom-3FHNNQ6P": {
-      "file": "dom-3FHNNQ6P.js"
-    },
-    "core-js-UR6QH4NU": {
-      "file": "core-js-UR6QH4NU.js"
+    "chunk-6WUVWKFX": {
+      "file": "chunk-6WUVWKFX.js"
     },
     "chunk-HV7BMKCE": {
       "file": "chunk-HV7BMKCE.js"
@@ -161,9 +179,6 @@
     },
     "chunk-7IZRYL2Z": {
       "file": "chunk-7IZRYL2Z.js"
-    },
-    "shadow-css-KQBFNRGS": {
-      "file": "shadow-css-KQBFNRGS.js"
     },
     "chunk-ZVATTXSA": {
       "file": "chunk-ZVATTXSA.js"
