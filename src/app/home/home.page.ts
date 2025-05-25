@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 import {
   IonHeader,
   IonToolbar,
@@ -9,8 +10,8 @@ import {
   IonImg,
   IonMenu,
   IonMenuButton,
-  IonButtons, // Importe IonButtons se estiver usando botões no header
-  IonIcon, // Importe IonIcon se estiver usando ícones
+  IonButtons,
+  IonIcon,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -26,38 +27,39 @@ import {
     IonButton,
     IonImg,
     IonMenu,
-    IonMenuButton, // Adicione IonMenu aqui
-    IonButtons, // Adicione IonButtons aqui, se necessário
-    IonIcon, // Adicione IonIcon aqui, se necessário
+    IonMenuButton,
+    IonButtons,
+    IonIcon,
   ],
 })
 export class HomePage {
   private filmes: any[] = [];
 
-  constructor(private navCtrl: NavController) {}
+  constructor(
+    private navCtrl: NavController,
+    private router: Router
+  ) {}
 
   async goToSuggestion() {
     try {
-      console.log('Iniciando carregamento do dataset...');
       const response = await fetch('../../assets/dataset/filmes.json');
       this.filmes = await response.json();
-      console.log('Dataset carregado:', this.filmes);
-
-      console.log('Escolhendo filme aleatório...');
       const filmeAleatorio =
         this.filmes[Math.floor(Math.random() * this.filmes.length)];
-      console.log('Filme escolhido:', filmeAleatorio);
-
-      console.log('Salvando filme no localStorage...');
       localStorage.setItem('filmeEscolhido', JSON.stringify(filmeAleatorio));
-
-      // Garante que a navegação ocorra após tudo estar pronto
       setTimeout(() => {
-        console.log('Navegando para /suggestion...');
         this.navCtrl.navigateForward('/suggestion');
-      }, 100); // Pequeno atraso para garantir consistência
+      }, 100);
     } catch (error) {
       console.error('Erro ao carregar filmes:', error);
     }
+  }
+
+  goToRegister() {
+    this.router.navigate(['/register']);
+  }
+
+  goToLogin() {
+    this.router.navigate(['/login']);
   }
 }

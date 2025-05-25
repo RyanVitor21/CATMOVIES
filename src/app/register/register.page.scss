@@ -1,0 +1,23 @@
+.ion-item-container {
+  margin-top: 1.2rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.img-container p {
+  margin: 0;
+  margin-top: -1.2rem;
+  max-width: 30ch;
+  color: #8c8c8c;
+}
+ion-img {
+  display: block;
+  max-width: 80px;
+}
+

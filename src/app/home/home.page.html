@@ -1,10 +1,10 @@
 <ion-header class="ion-no-border header-bg">
   <ion-toolbar>
-    <ion-buttons slot="start"></ion-buttons>  <!-- espaço vazio à esquerda -->
+    <ion-buttons slot="start"></ion-buttons>
     <ion-title class="primary-color-04 font-koulen" style="padding-top: 35px; width: 100%; text-align: center;">
       CATMOVIES
     </ion-title>
-    <ion-buttons slot="end"></ion-buttons>    <!-- espaço vazio à direita -->
+    <ion-buttons slot="end"></ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -12,14 +12,36 @@
   <div id="container" class="center-flex">
     <ion-img
       src="../../assets/images/cat.png"
-      alt="The Wisconsin State Capitol building in Madison, WI at night"
+      alt="Gato catito"
     ></ion-img>
+
     <p class="font-lexend width-20ch pb-1">
       “Bem vindo, meow! É só clicar e ser feliz.”
     </p>
 
+    <!-- Botão principal -->
     <ion-button class="font-lexend button" (click)="goToSuggestion()">
       ASSISTIR, meow
+    </ion-button>
+
+    <!-- Botão para Registro -->
+    <ion-button
+      expand="block"
+      fill="outline"
+      color="success"
+      (click)="goToRegister()"
+    >
+      Ir para Cadastro
+    </ion-button>
+
+    <!-- Botão para Login -->
+    <ion-button
+      expand="block"
+      fill="outline"
+      color="primary"
+      (click)="goToLogin()"
+    >
+      Ir para Login
     </ion-button>
   </div>
 </ion-content>
