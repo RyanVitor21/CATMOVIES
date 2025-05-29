@@ -1,81 +1,79 @@
 <ion-header class="ion-no-border header-bg margin-bottom-person">
   <ion-toolbar>
-    <ion-title class="primary-color-04 font-koulen"> CATMOVIES </ion-title>
+    <ion-title class="primary-color-04 font-koulen">CATMOVIES</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <div class="img-container">
-    <ion-img src="../../assets/images/cat.png" alt="cat 'catito'"> </ion-img>
+    <ion-img src="../../assets/images/cat.png" alt="Gato 'catito'"></ion-img>
     <p>"É só preencher as informações e ser Meow feliz."</p>
   </div>
+
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-    <!-- Campo Nome -->
-    <div class="ion-item-container">
-      <ion-item>
-        <ion-label position="floating">Nome completo</ion-label>
-        <ion-input formControlName="name" type="text"></ion-input>
-      </ion-item>
-      <ion-text
-        color="danger"
-        *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched"
-      >
-        <p>O nome é obrigatório.</p>
-      </ion-text>
+    <!-- Nome -->
+    <ion-item>
+      <ion-label position="floating">Nome completo</ion-label>
+      <ion-input
+        formControlName="name"
+        type="text"
+        name="name"
+        autocomplete="off"
+      ></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched">
+      <p>O nome é obrigatório.</p>
+    </ion-text>
 
-      <!-- Campo Email -->
-      <ion-item>
-        <ion-label position="floating">E-mail</ion-label>
-        <ion-input formControlName="email" type="email"></ion-input>
-      </ion-item>
-      <ion-text
-        color="danger"
-        *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched"
-      >
-        <p>E-mail inválido.</p>
-      </ion-text>
+    <!-- E-mail -->
+    <ion-item>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input
+        formControlName="email"
+        type="email"
+        name="email"
+        autocomplete="off"
+      ></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+      <p>E-mail inválido.</p>
+    </ion-text>
 
-      <!-- Campo Senha -->
-      <ion-item>
-        <ion-label position="floating">Senha</ion-label>
-        <ion-input formControlName="password" type="password"></ion-input>
-      </ion-item>
-      <ion-text
-        color="danger"
-        *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched"
-      >
-        <p>A senha deve ter pelo menos 6 caracteres.</p>
-      </ion-text>
+    <!-- Senha -->
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input
+        formControlName="password"
+        type="password"
+        name="password"
+        autocomplete="off"
+      ></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+      <p>A senha deve ter pelo menos 6 caracteres.</p>
+    </ion-text>
 
-      <!-- Campo Confirmar Senha -->
-      <ion-item>
-        <ion-label position="floating">Confirmar Senha</ion-label>
-        <ion-input
-          formControlName="confirmPassword"
-          type="password"
-        ></ion-input>
-      </ion-item>
-      <ion-text
-        color="danger"
-        *ngIf="registerForm.hasError('senhasDiferentes')"
-      >
-        <p>As senhas não coincidem.</p>
-      </ion-text>
-    </div>
+    <!-- Confirmar Senha -->
+    <ion-item>
+      <ion-label position="floating">Confirmar Senha</ion-label>
+      <ion-input
+        formControlName="confirmPassword"
+        type="password"
+        name="confirmPassword"
+        autocomplete="off"
+      ></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="registerForm.hasError('senhasDiferentes')">
+      <p>As senhas não coincidem.</p>
+    </ion-text>
 
     <br />
 
-    <!-- Botão Cadastrar -->
+    <!-- Botões -->
     <ion-button type="submit" expand="block" [disabled]="registerForm.invalid">
       Cadastrar
-      
     </ion-button>
-    <ion-button (click)="debugListUsers()" expand="block" color="medium">
-  Mostrar usuários no console
-</ion-button>
-    
 
-    <!-- Botão Voltar -->
     <ion-button
       (click)="goToLogin()"
       expand="block"
@@ -86,4 +84,3 @@
     </ion-button>
   </form>
 </ion-content>
-

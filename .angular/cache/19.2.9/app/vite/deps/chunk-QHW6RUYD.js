@@ -1,11 +1,19 @@
 import {
+  MENU_BACK_BUTTON_PRIORITY,
+  OVERLAY_BACK_BUTTON_PRIORITY,
+  shouldUseCloseWatcher
+} from "./chunk-OWZCGQFQ.js";
+import {
+  BACKDROP_NO_SCROLL
+} from "./chunk-4AF7KAXZ.js";
+import {
   LIFECYCLE_DID_ENTER,
   LIFECYCLE_DID_LEAVE,
   LIFECYCLE_WILL_ENTER,
   LIFECYCLE_WILL_LEAVE,
   LIFECYCLE_WILL_UNLOAD,
   createAnimation
-} from "./chunk-L3IZ2C2F.js";
+} from "./chunk-VJ3WDX24.js";
 import {
   getMode,
   setMode
@@ -18,17 +26,6 @@ import {
   removeEventListener
 } from "./chunk-L6BHBXTE.js";
 import {
-  BACKDROP_NO_SCROLL
-} from "./chunk-4AF7KAXZ.js";
-import {
-  MENU_BACK_BUTTON_PRIORITY,
-  OVERLAY_BACK_BUTTON_PRIORITY,
-  shouldUseCloseWatcher
-} from "./chunk-VHXHNOM7.js";
-import {
-  doc
-} from "./chunk-CJ5MJUPJ.js";
-import {
   config,
   configFromSession,
   configFromURL,
@@ -36,6 +33,9 @@ import {
   printIonWarning,
   saveConfig
 } from "./chunk-ZWBDDU4U.js";
+import {
+  doc
+} from "./chunk-CJ5MJUPJ.js";
 import {
   NgControl
 } from "./chunk-O4Q7I7TA.js";
@@ -4159,4 +4159,4 @@ export {
    * (C) Ionic http://ionicframework.com - MIT License
    *)
 */
-//# sourceMappingURL=chunk-WSNDEIZA.js.map
+//# sourceMappingURL=chunk-QHW6RUYD.js.map
