@@ -69,8 +69,6 @@ export class LoginPage implements OnInit {
 
       if (isValid) {
         this.loginError = false;
-
-        // ✅ Redireciona para a página Home
         this.router.navigate(['/home']);
       } else {
         this.loginError = true;

@@ -46,15 +46,6 @@ import {
 export class RegisterPage implements OnInit {
   registerForm: FormGroup;
 
-  async debugListUsers() {
-  const res = await this.db['dbInstance'].executeSql(`SELECT * FROM users`, []);
-  console.log('Usuários cadastrados:');
-  for (let i = 0; i < res.rows.length; i++) {
-    console.log(res.rows.item(i));
-  }
-}
-
-
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -86,8 +77,8 @@ export class RegisterPage implements OnInit {
 
   async onSubmit() {
     if (this.registerForm.valid) {
-      const { name, email, password } = this.registerForm.value;
-      const success = await this.db.addUser(name, email, password);
+      const { name, email, password, confirmPassword } = this.registerForm.value;
+      const success = await this.db.addUser(name, email, password, confirmPassword);
 
       if (success) {
         this.router.navigate(['/login']);
@@ -95,9 +86,12 @@ export class RegisterPage implements OnInit {
     }
   }
 
+  async debugListUsers() {
+    const users = await this.db.getAllUsers();
+    console.log('Usuários cadastrados:', users);
+  }
+
   goToLogin() {
     this.router.navigate(['/login']);
   }
 }
-
-

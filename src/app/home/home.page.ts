@@ -33,6 +33,7 @@ import {
   ],
 })
 export class HomePage {
+  
   private filmes: any[] = [];
 
   constructor(
@@ -62,4 +63,6 @@ export class HomePage {
   goToLogin() {
     this.router.navigate(['/login']);
   }
+
+  
 }
