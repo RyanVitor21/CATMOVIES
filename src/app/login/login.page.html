@@ -1,12 +1,12 @@
 <ion-header class="ion-no-border header-bg margin-bottom-person">
   <ion-toolbar>
-    <ion-title class="primary-color-04 font-koulen"> CATMOVIES </ion-title>
+    <ion-title class="primary-color-04 font-koulen">CATMOVIES</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <div class="img-container">
-    <ion-img src="../../assets/images/cat.png" alt="cat 'catito'"> </ion-img>
+    <ion-img src="../../assets/images/cat.png" alt="Gato 'catito'"></ion-img>
     <p>"Meow, não sabe qual filme escolher? vem que eu te ajudo."</p>
   </div>
 
@@ -14,49 +14,50 @@
     <!-- Campo Email -->
     <ion-item>
       <ion-label position="floating">E-mail</ion-label>
-      <ion-input formControlName="email" type="email" class="email"></ion-input>
+      <ion-input
+        formControlName="email"
+        type="email"
+        name="email"
+        autocomplete="off"
+      ></ion-input>
     </ion-item>
-    <ion-text
-      color="danger"
-      *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
-    >
+    <ion-text color="danger" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
       <p>E-mail inválido.</p>
     </ion-text>
 
     <!-- Campo Senha -->
     <ion-item>
       <ion-label position="floating">Senha</ion-label>
-      <ion-input formControlName="password" type="password"></ion-input>
+      <ion-input
+        formControlName="password"
+        type="password"
+        name="password"
+        autocomplete="off"
+      ></ion-input>
     </ion-item>
-    <ion-text
-      color="danger"
-      *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
-    >
+    <ion-text color="danger" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
       <p>A senha é obrigatória.</p>
     </ion-text>
 
-    <br />
-
-    <!-- Botão Login -->
-    <ion-button type="submit" expand="block" [disabled]="loginForm.invalid">
-      Entrar
-    </ion-button>
-
-    <!-- Botão Cadastro -->
-    <ion-button
-      routerLink="/register"
-      (click)="goToRegister()"
-      expand="block"
-      class="cadastro"
-    >
-      Criar conta
-    </ion-button>
-
-    <!-- Mensagem de erro de login -->
+    <!-- Erro de login -->
     <ion-text color="danger" *ngIf="loginError">
       <p style="margin-top: 0.5rem; text-align: center;">
         E-mail ou senha inválidos.
       </p>
     </ion-text>
+
+    <br />
+
+    <!-- Botões -->
+    <ion-button type="submit" expand="block" [disabled]="loginForm.invalid">Entrar</ion-button>
+
+    <ion-button
+      (click)="goToRegister()"
+      expand="block"
+      fill="outline"
+      color="medium"
+    >
+      Criar conta
+    </ion-button>
   </form>
 </ion-content>
