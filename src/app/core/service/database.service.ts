@@ -1,7 +1,93 @@
-import { Injectable } from '@angular/core';
-import { SQLite, SQLiteObject } from '@awesome-cordova-plugins/sqlite/ngx';
+import { Injectable, signal, WritableSignal } from '@angular/core';
+import { CapacitorSQLite, SQLiteConnection, SQLiteDBConnection } from '@capacitor-community/sqlite';
+
+const DB_USERS = 'myuserdb';
+
+export interface User {
+  id: number;
+  name: string;
+  email: string;
+  password: string;
+  repeatpassword: string;
+}
 
 @Injectable({ providedIn: 'root' })
+export class DatabaseService {
+  private sqlite: SQLiteConnection = new SQLiteConnection(CapacitorSQLite);
+  private db!: SQLiteDBConnection;
+  private user: WritableSignal<User[]> = signal<User[]>([]);
+
+ constructor() {
+  // Aguarde explicitamente a inicialização
+  this.initializPlugin().catch((e) =>
+    console.error('[SQLite] Erro ao inicializar plugin:', e)
+  );
+}
+
+  async initializPlugin() {
+    this.db = await this.sqlite.createConnection(DB_USERS, false, 'no-encryption', 1, false);
+    await this.db.open();
+
+    const schema = `
+      CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        email TEXT UNIQUE,
+        password TEXT,
+        repeatpassword TEXT
+      );
+    `;
+    await this.db.execute(schema);
+    await this.loadUsers();
+
+    return true;
+  }
+
+  async loadUsers() {
+    const result = await this.db.query('SELECT * FROM users');
+    this.user.set(result.values || []);
+  }
+
+  async addUser(name: string, email: string, password: string, repeatpassword: string) {
+    const query = `
+      INSERT INTO users (name, email, password, repeatpassword)
+      VALUES (?, ?, ?, ?)
+    `;
+    const result = await this.db.run(query, [name, email, password, repeatpassword]);
+    await this.loadUsers();
+    return result;
+  }
+
+  async validateUser(email: string, password: string): Promise<boolean> {
+    const query = `SELECT * FROM users WHERE email = ? AND password = ?`;
+    const result = await this.db.query(query, [email, password]);
+    return (result.values?.length || 0) > 0;
+    
+  }
+
+
+
+  async getAllUsers(): Promise<User[]> {
+    const result = await this.db.query('SELECT * FROM users');
+    return result.values || [];
+  }
+
+  async updateUserById(id: string, password: string) {
+    const query = `UPDATE users SET password = ? WHERE id = ?`;
+    const result = await this.db.run(query, [password, id]);
+    await this.loadUsers();
+    return result;
+  }
+
+  async deleteUserById(id: string) {
+    const query = `DELETE FROM users WHERE id = ?`;
+    const result = await this.db.run(query, [id]);
+    await this.loadUsers();
+    return result;
+  }
+}
+
+/*@Injectable({ providedIn: 'root' })
 export class DatabaseService {
   private dbInstance!: SQLiteObject;
 
@@ -73,4 +159,4 @@ export class DatabaseService {
       return false;
     }
   }
-}
+}*/
