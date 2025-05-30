@@ -21,6 +21,8 @@ import {
   IonInput,
   IonLabel,
   IonText,
+  IonButtons,
+  IonBackButton,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -40,6 +42,8 @@ import {
     IonInput,
     IonLabel,
     IonText,
+    IonButtons,
+    IonBackButton,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
@@ -47,7 +51,7 @@ import {
 })
 export class LoginPage implements OnInit {
   loginForm: FormGroup;
-  loginError: boolean = false;
+  loginError = false;
 
   constructor(
     private fb: FormBuilder,
@@ -67,11 +71,10 @@ export class LoginPage implements OnInit {
       const { email, password } = this.loginForm.value;
       const isValid = await this.db.validateUser(email, password);
 
+      this.loginError = !isValid;
+
       if (isValid) {
-        this.loginError = false;
         this.router.navigate(['/home']);
-      } else {
-        this.loginError = true;
       }
     }
   }

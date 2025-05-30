@@ -1,27 +1,28 @@
 import { Component } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
-import {SplashScreen} from '@capacitor/splash-screen';
 import { Platform } from '@ionic/angular';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
-import { SQLite } from '@awesome-cordova-plugins/sqlite/ngx';
-import { SQLitePorter } from '@awesome-cordova-plugins/sqlite-porter/ngx';
 import { DatabaseService } from './core/service/database.service';
+import { SplashScreen } from '@capacitor/splash-screen';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
   standalone: true,
-  imports: [IonicModule],
+  imports: [IonApp, IonRouterOutlet],
 })
-export class AppComponent{
-  constructor( private database: DatabaseService) {
-    this.initApp();
+export class AppComponent {
+  constructor(
+    private platform: Platform,
+    private database: DatabaseService
+  ) {
+    this.initializeApp();
   }
 
-  async initApp(){
-    await this.database.initializPlugin();
-    SplashScreen.hide();
+  async initializeApp() {
+    await this.platform.ready(); // ✅ Aguarda o ambiente estar pronto
+    await this.database.initializPlugin(); // ✅ Só inicializa agora
+    await SplashScreen.hide(); // ✅ Oculta a splash screen
   }
 }
 

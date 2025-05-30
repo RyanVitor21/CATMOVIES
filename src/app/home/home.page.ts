@@ -33,7 +33,6 @@ import {
   ],
 })
 export class HomePage {
-  
   private filmes: any[] = [];
 
   constructor(
@@ -43,14 +42,15 @@ export class HomePage {
 
   async goToSuggestion() {
     try {
-      const response = await fetch('../../assets/dataset/filmes.json');
+      // ✅ Corrigido o caminho do JSON para funcionar em dispositivos Android e Web
+      const response = await fetch('assets/dataset/filmes.json');
       this.filmes = await response.json();
+
       const filmeAleatorio =
         this.filmes[Math.floor(Math.random() * this.filmes.length)];
       localStorage.setItem('filmeEscolhido', JSON.stringify(filmeAleatorio));
-      setTimeout(() => {
-        this.navCtrl.navigateForward('/suggestion');
-      }, 100);
+
+      this.navCtrl.navigateForward('/suggestion');
     } catch (error) {
       console.error('Erro ao carregar filmes:', error);
     }
@@ -63,6 +63,4 @@ export class HomePage {
   goToLogin() {
     this.router.navigate(['/login']);
   }
-
-  
 }

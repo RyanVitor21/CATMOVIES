@@ -58,28 +58,23 @@ export class RegisterPage implements OnInit {
         password: ['', [Validators.required, Validators.minLength(6)]],
         confirmPassword: ['', Validators.required],
       },
-      { validators: this.senhasIguais.bind(this) }
+      { validators: this.senhasIguais }
     );
   }
 
   ngOnInit() {}
 
-  senhasIguais(formGroup: FormGroup) {
-    const senha = formGroup.get('password')?.value;
-    const confirmSenha = formGroup.get('confirmPassword')?.value;
-
-    if (senha !== confirmSenha) {
-      formGroup.get('confirmPassword')?.setErrors({ senhasDiferentes: true });
-    } else {
-      formGroup.get('confirmPassword')?.setErrors(null);
-    }
+  senhasIguais(group: FormGroup) {
+    const password = group.get('password')?.value;
+    const confirm = group.get('confirmPassword')?.value;
+    return password === confirm ? null : group.get('confirmPassword')?.setErrors({ senhasDiferentes: true });
   }
 
   async onSubmit() {
     if (this.registerForm.valid) {
       const { name, email, password, confirmPassword } = this.registerForm.value;
-      const success = await this.db.addUser(name, email, password, confirmPassword);
 
+      const success = await this.db.addUser(name, email, password, confirmPassword);
       if (success) {
         this.router.navigate(['/login']);
       }
@@ -88,7 +83,7 @@ export class RegisterPage implements OnInit {
 
   async debugListUsers() {
     const users = await this.db.getAllUsers();
-    console.log('Usuários cadastrados:', users);
+    console.table(users);
   }
 
   goToLogin() {

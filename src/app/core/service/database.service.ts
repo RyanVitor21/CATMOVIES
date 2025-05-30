@@ -1,7 +1,8 @@
 import { Injectable, signal, WritableSignal } from '@angular/core';
 import { CapacitorSQLite, SQLiteConnection, SQLiteDBConnection } from '@capacitor-community/sqlite';
+import { Platform } from '@ionic/angular';
 
-const DB_USERS = 'myuserdb';
+const DB_NAME = 'myuserdb';
 
 export interface User {
   id: number;
@@ -15,57 +16,89 @@ export interface User {
 export class DatabaseService {
   private sqlite: SQLiteConnection = new SQLiteConnection(CapacitorSQLite);
   private db!: SQLiteDBConnection;
-  private user: WritableSignal<User[]> = signal<User[]>([]);
+  private usersSignal: WritableSignal<User[]> = signal<User[]>([]);
 
- constructor() {
-  // Aguarde explicitamente a inicialização
-  this.initializPlugin().catch((e) =>
-    console.error('[SQLite] Erro ao inicializar plugin:', e)
-  );
-}
+  constructor(private platform: Platform) {}
 
   async initializPlugin() {
-    this.db = await this.sqlite.createConnection(DB_USERS, false, 'no-encryption', 1, false);
-    await this.db.open();
+    try {
+      await this.platform.ready(); // ✅ Aguarda o Ionic estar pronto
 
-    const schema = `
-      CREATE TABLE IF NOT EXISTS users (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT,
-        email TEXT UNIQUE,
-        password TEXT,
-        repeatpassword TEXT
-      );
-    `;
-    await this.db.execute(schema);
-    await this.loadUsers();
+      const isConn = await this.sqlite.isConnection(DB_NAME, false);
+      if (!isConn.result) {
+        this.db = await this.sqlite.createConnection(DB_NAME, false, 'no-encryption', 1, false);
+        await this.db.open();
+      } else {
+        // ✅ Agora com dois argumentos obrigatórios
+        this.db = await this.sqlite.retrieveConnection(DB_NAME, false);
+      }
 
-    return true;
+      const schema = `
+        CREATE TABLE IF NOT EXISTS users (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          name TEXT,
+          email TEXT UNIQUE,
+          password TEXT,
+          repeatpassword TEXT
+        );
+      `;
+      await this.db.execute(schema);
+      await this.loadUsers();
+
+      console.log('[SQLite] Plugin inicializado com sucesso.');
+      return true;
+    } catch (error) {
+      console.error('[SQLite] Erro ao inicializar o plugin:', error);
+      throw error;
+    }
   }
 
   async loadUsers() {
-    const result = await this.db.query('SELECT * FROM users');
-    this.user.set(result.values || []);
+    try {
+      const result = await this.db.query('SELECT * FROM users');
+      this.usersSignal.set(result.values || []);
+    } catch (e) {
+      console.error('[SQLite] Erro ao carregar usuários:', e);
+    }
   }
 
   async addUser(name: string, email: string, password: string, repeatpassword: string) {
-    const query = `
-      INSERT INTO users (name, email, password, repeatpassword)
-      VALUES (?, ?, ?, ?)
-    `;
-    const result = await this.db.run(query, [name, email, password, repeatpassword]);
-    await this.loadUsers();
-    return result;
+    try {
+      const exists = await this.userExists(email);
+      if (exists) {
+        alert('Este e-mail já está cadastrado.');
+        return false;
+      }
+
+      const query = `
+        INSERT INTO users (name, email, password, repeatpassword)
+        VALUES (?, ?, ?, ?)
+      `;
+      await this.db.run(query, [name, email, password, repeatpassword]);
+      await this.loadUsers();
+      return true;
+    } catch (err) {
+      console.error('[SQLite] Erro ao adicionar usuário:', err);
+      alert('Erro ao salvar usuário: ' + JSON.stringify(err));
+      return false;
+    }
+  }
+
+  async userExists(email: string): Promise<boolean> {
+    const result = await this.db.query(`SELECT * FROM users WHERE email = ?`, [email]);
+    return (result.values?.length || 0) > 0;
   }
 
   async validateUser(email: string, password: string): Promise<boolean> {
-    const query = `SELECT * FROM users WHERE email = ? AND password = ?`;
-    const result = await this.db.query(query, [email, password]);
-    return (result.values?.length || 0) > 0;
-    
+    try {
+      const query = `SELECT * FROM users WHERE email = ? AND password = ?`;
+      const result = await this.db.query(query, [email, password]);
+      return (result.values?.length || 0) > 0;
+    } catch (e) {
+      console.error('[SQLite] Erro ao validar login:', e);
+      return false;
+    }
   }
-
-
 
   async getAllUsers(): Promise<User[]> {
     const result = await this.db.query('SELECT * FROM users');
@@ -86,77 +119,3 @@ export class DatabaseService {
     return result;
   }
 }
-
-/*@Injectable({ providedIn: 'root' })
-export class DatabaseService {
-  private dbInstance!: SQLiteObject;
-
-  constructor(private sqlite: SQLite) {
-    this.init();
-  }
-
-  async init() {
-    console.log('[SQLite] Banco catmovies.db criado com sucesso!');
-    try {
-      const db = await this.sqlite.create({
-        name: 'catmovies.db',
-        location: 'default'
-      });
-      this.dbInstance = db;
-
-      await db.executeSql(`
-        CREATE TABLE IF NOT EXISTS users (
-          id INTEGER PRIMARY KEY AUTOINCREMENT,
-          name TEXT,
-          email TEXT UNIQUE,
-          password TEXT
-        )
-      `, []);
-
-      console.log('[SQLite] Banco inicializado com sucesso.');
-    } catch (error) {
-      console.error('[SQLite] Erro na inicialização:', error);
-    }
-  }
-
-  async userExists(email: string): Promise<boolean> {
-    const res = await this.dbInstance.executeSql(
-      `SELECT * FROM users WHERE email = ?`,
-      [email]
-    );
-    return res.rows.length > 0;
-  }
-
-  async addUser(name: string, email: string, password: string): Promise<boolean> {
-    const exists = await this.userExists(email);
-    if (exists) {
-      alert('Este e-mail já está cadastrado.');
-      return false;
-    }
-
-    try {
-      await this.dbInstance.executeSql(
-        `INSERT INTO users (name, email, password) VALUES (?, ?, ?)`,
-        [name, email, password]
-      );
-      return true;
-    } catch (err: any) {
-      console.error('[SQLite] Erro ao adicionar usuário:', err);
-      alert('[ERRO DB] ' + JSON.stringify(err));
-      return false;
-    }
-  }
-
-  async validateUser(email: string, password: string): Promise<boolean> {
-    try {
-      const res = await this.dbInstance.executeSql(
-        `SELECT * FROM users WHERE email = ? AND password = ?`,
-        [email, password]
-      );
-      return res.rows.length > 0;
-    } catch (err) {
-      console.error('[SQLite] Erro ao validar usuário:', err);
-      return false;
-    }
-  }
-}*/
