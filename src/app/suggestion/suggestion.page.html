@@ -1,7 +1,7 @@
 <ion-header class="ion-no-border header-bg">
   <ion-toolbar>
     <ion-title
-      class="primary-color-04 font-koulen title-center" 
+      class="primary-color-04 font-koulen title-center"
       (click)="goToHome()"
       style="cursor: pointer; padding-top: 35px"
     >
@@ -11,17 +11,23 @@
 </ion-header>
 
 <ion-content id="main-content">
-  <div #containerRef id="container" class="center-flex animate">
+  <!-- ⬇️ Só mostra conteúdo se filme estiver pronto -->
+  <div *ngIf="filme?.titulo" #containerRef id="container" class="center-flex animate">
     <!-- Capa -->
-    <ion-img class="cartaz" [src]="filme.capa" alt="Capa do Filme"></ion-img>
+    <ion-img
+      class="cartaz"
+      [src]="filme.capa"
+      alt="Capa do Filme"
+      (ionError)="filme.capa = 'assets/images/default.png'"
+    ></ion-img>
 
     <span class="container-data">
       <!-- Título -->
       <h1 class="movie-title border">{{ filme.titulo }}</h1>
 
       <span class="data-movie border">
-        <span class="gender">{{filme.genero}}</span>
-        <span class="duration"> {{filme.duracao}}</span>
+        <span class="gender">{{ filme.genero }}</span>
+        <span class="duration">{{ filme.duracao }}</span>
       </span>
 
       <!-- Sinopse + IMDb + Streaming -->
@@ -38,9 +44,10 @@
 
       <span class="streaming-available">
         <h2 class="font-lexend">Disponível em:</h2>
-        <span class="streaming-list"> {{filme.streaming_disponivel}} </span>
+        <span class="streaming-list">{{ filme.streaming_disponivel }}</span>
       </span>
     </span>
+
     <!-- Botão de voltar -->
     <ion-button class="font-lexend button" (click)="carregarFilmeAleatorio()">
       escolher novamente, meow
