@@ -1,0 +1,48 @@
+video onde eu peguei os comandos:
+
+https://www.youtube.com/watch?v=fJs-jylQlYQ
+
+
+npm install -g @ionic/cli
+ionic build
+ionic cap add android      
+ionic cap sync
+ionic cap open android
+
+
+baixar o android studio mais atual qualquer versão anterior não vai buildar o apk 
+
+
+
+vocês que pegaram o codigo e tão na versão do ionic 5 não esquecer de alterar o arquivo ionic config pra
+
+  "type": "angular-standalone"
+  para
+  "type": "angular"
+}
+
+npx @capacitor/assets generate --iconBackgroundColor "#8B0016"
+npx @capacitor/assets generate --platform android
+
+
+
+
+
+npm install @awesome-cordova-plugins/sqlite-porter 
+
+# 1. Compile as mudanças
+ionic build
+
+# 2. Copie para o Android
+ionic cap copy android
+
+# 3. (Opcional) Sincronize plugins
+ionic cap sync android
+
+# 4. Abra no Android Studio
+ionic cap open android
+
+# 5. Gere o APK ou rode no celular
+
+
+
