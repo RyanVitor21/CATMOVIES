@@ -11,7 +11,8 @@
     "test": "ng test",
     "lint": "ng lint",
      "build:android": "rd /s /q www && ionic build && ionic cap copy android && ionic cap open android",
-     "buildl:android": "rm -rf www && ionic build && ionic cap copy android && ionic cap open android"
+     "buildl:android": "rm -rf www && ionic build && ionic cap copy android && ionic cap open android",
+     "build:A": "ionic build && ionic cap copy android && ionic cap sync android && ionic cap open android"
     
   },
   "private": true,
