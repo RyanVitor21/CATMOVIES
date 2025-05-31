@@ -40,21 +40,27 @@ export class HomePage {
     private router: Router
   ) {}
 
-  async goToSuggestion() {
-    try {
-      // ✅ Corrigido o caminho do JSON para funcionar em dispositivos Android e Web
-      const response = await fetch('assets/dataset/filmes.json');
-      this.filmes = await response.json();
+ async goToSuggestion() {
+  const isLoggedIn = localStorage.getItem('isLoggedIn');
 
-      const filmeAleatorio =
-        this.filmes[Math.floor(Math.random() * this.filmes.length)];
-      localStorage.setItem('filmeEscolhido', JSON.stringify(filmeAleatorio));
-
-      this.navCtrl.navigateForward('/suggestion');
-    } catch (error) {
-      console.error('Erro ao carregar filmes:', error);
-    }
+  if (isLoggedIn !== 'true') {
+    this.router.navigate(['/login']); // 🔒 não logado? redireciona
+    return;
   }
+
+  try {
+    const response = await fetch('assets/dataset/filmes.json');
+    this.filmes = await response.json();
+
+    const filmeAleatorio =
+      this.filmes[Math.floor(Math.random() * this.filmes.length)];
+    localStorage.setItem('filmeEscolhido', JSON.stringify(filmeAleatorio));
+
+    this.navCtrl.navigateForward('/suggestion');
+  } catch (error) {
+    console.error('Erro ao carregar filmes:', error);
+  }
+}
 
   goToRegister() {
     this.router.navigate(['/register']);

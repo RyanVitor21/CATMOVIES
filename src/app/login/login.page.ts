@@ -67,17 +67,18 @@ export class LoginPage implements OnInit {
   ngOnInit() {}
 
   async onSubmit() {
-    if (this.loginForm.valid) {
-      const { email, password } = this.loginForm.value;
-      const isValid = await this.db.validateUser(email, password);
+     if (this.loginForm.valid) {
+    const { email, password } = this.loginForm.value;
+    const isValid = await this.db.validateUser(email, password);
 
-      this.loginError = !isValid;
+    this.loginError = !isValid;
 
-      if (isValid) {
-        this.router.navigate(['/home']);
-      }
+    if (isValid) {
+      localStorage.setItem('isLoggedIn', 'true'); // 👈 marca como logado
+      this.router.navigate(['/suggestion']);       // 👈 vai direto pra suggestion
     }
   }
+}
 
   goToRegister() {
     this.router.navigate(['/register']);

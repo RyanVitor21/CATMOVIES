@@ -43,8 +43,8 @@ import { FormsModule } from '@angular/forms';
 export class SuggestionPage implements OnInit {
   @ViewChild('containerRef', { static: false }) containerRef!: ElementRef;
 
-  filme: any = {}; // Inicializa como objeto vazio para evitar "undefined"
-  private readonly FILMES_JSON = '../../assets/dataset/filmes.json';
+  filme: any = {}; // Inicializa vazio
+  private readonly FILMES_JSON = 'assets/dataset/filmes.json';
 
   constructor(private navCtrl: NavController) {}
 
@@ -55,19 +55,23 @@ export class SuggestionPage implements OnInit {
   carregarFilme() {
     const filmeSalvo = localStorage.getItem('filmeEscolhido');
     if (filmeSalvo) {
-      this.filme = JSON.parse(filmeSalvo);
+      const filme = JSON.parse(filmeSalvo);
+      if (filme?.titulo && filme?.capa) {
+        this.filme = filme;
+      } else {
+        this.carregarFilmeAleatorio();
+      }
     } else {
       this.carregarFilmeAleatorio();
     }
   }
 
   async carregarFilmeAleatorio() {
-    const container = this.containerRef.nativeElement;
+    const container = this.containerRef?.nativeElement;
 
-    // animação de saída
-    container.classList.add('fade-out');
+    // Animação de saída
+    container?.classList.add('fade-out');
 
-    // espera 1.5 s antes de trocar o filme
     setTimeout(async () => {
       try {
         const response = await fetch(this.FILMES_JSON);
@@ -82,19 +86,18 @@ export class SuggestionPage implements OnInit {
         this.filme = {};
       }
 
-      // animação de entrada
-      container.classList.remove('fade-out');
-      container.classList.add('fade-in');
+      // Animação de entrada
+      container?.classList.remove('fade-out');
+      container?.classList.add('fade-in');
 
-      // remove 'fade-in' depois que terminar (0.5 s)
-      setTimeout(() => container.classList.remove('fade-in'), 500);
-    }, 1500); // 1.5 s
+      setTimeout(() => container?.classList.remove('fade-in'), 500);
+    }, 1500);
   }
 
- goToHome() {
-  this.navCtrl.navigateBack('/home', {
-    animated: true,
-    animationDirection: 'back',
-  });
- }
+  goToHome() {
+    this.navCtrl.navigateBack('/home', {
+      animated: true,
+      animationDirection: 'back',
+    });
+  }
 }
