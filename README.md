@@ -3,6 +3,9 @@
 
 Um aplicativo mobile usando **Ionic 5 + Angular**.
 
+Apresentação em SLIDE
+https://prezi.com/view/YjlV9V6EYDFS8X4TfdUF/
+
 ---
 
 ## 🧰 Tecnologias Utilizadas
